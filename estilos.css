@@ -1,0 +1,294 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 1rem;
+	user-select: none;
+	text-decoration: none;
+	font-family: monospace;	
+
+}
+html{
+	scroll-behavior: smooth;
+}
+body{
+	padding-top: 6em;
+	color: white;
+	min-height: 100vh;
+	background: #0c192c;
+}
+h1{
+	font-size: 2em;
+}
+
+h2{
+	font-size: 2rem;
+	margin-top: 5em;
+	max-width: 65%;
+}
+h4{
+	color: white;
+}
+.container{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+}
+.bubbles{
+	position: relative;
+	display: flex;
+}
+
+.bubbles span{
+	position: relative;
+	padding: 0.5em;
+	background: #4fc3dc;
+	margin: 0 calc(100vh / 6);
+	border-radius: 50%;
+	box-shadow: 0 0 0 1em #4fc3dc44,
+	0 0 3em #4fc3dc,
+	0 0 6em #4fc3dc;
+	animation:  animate 15s linear infinite;
+	animation-duration: calc(125s / var(--i));
+}
+/*@media (max-width: 576px){
+	.bubbles span{
+		animation:  animate 2s linear infinite;
+		animation-duration: calc(80s / var(--i));
+	}
+}*/
+.bubbles span:nth-child(even){
+	background: #ff2d75;
+	box-shadow: 0 0 0 10px #ff2d7544,
+	0 0 3em #ff2d75,
+	0 0 6em #ff2d75;
+}
+@keyframes animate{
+	0%{
+		transform: translateY(400vh) scale(0);
+	}
+	100%{
+		transform: translateY(-10vh) scale(1);
+	}
+}
+nav{
+/*	background:#0c192c;*/
+background: #060415;
+	position: fixed;
+	top: 0;
+	display: flex;
+	width: 100%;
+	height: 7em;
+	font-size: 1rem;
+	padding: 1em;
+	box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75)
+}
+
+.btnHeader{
+	height: 100%;
+	align-content: center;
+	position: relative;
+		display: none;
+
+}
+
+.btnHeader::after{
+	content: "";
+	height: 2px;
+	width: 0;
+	background:  #ff2d75;
+	position: absolute;
+	left: 0;
+	top: 4em;
+	bottom: -10px;
+	transition: 0.5s;
+}
+.btnHeader:hover::after{
+	width: 100%;
+}
+#links{
+	display: none;
+	align-items: center;
+	height: 5em;
+	width: 50%;
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+	position: absolute;
+	right: 0;
+}
+#logos{
+	margin: 1em;
+	width: 10em;
+	height: auto;
+}
+#about{
+	margin-left: 2em;
+	width: 20%;
+	align-content: center;
+}
+#content{
+	width: 100%;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+#about-me{
+	padding-top: 4em;
+	width: 65%;
+	height: 60vh;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+#habilities{
+	margin-top: 2em;
+	margin-bottom: 10em;
+	width: 65%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2em;
+	padding: 4em;
+	border: 1px solid #cce6ff;
+	border-radius: 20px;
+	justify-content: center;
+	color: black;
+}
+.hability{
+	display: flex;
+	flex-direction: column;
+	border: 1px solid blue;
+	width: 5.5em;
+	height: 5.5em;
+	border-radius: 0.5em;
+	align-items: center;
+	justify-content: center;
+	background: #b3ffd9;
+	font-size: 1rem;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75)
+
+}
+.hability:hover{
+	transform: scale(1.1);
+
+}
+.hability-img{
+	width: 3em;
+	height: auto;
+}
+
+#projects{
+	margin-top: 3em;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2em;
+	width: 65%;
+	justify-content: center;
+	color: black;
+}
+.project{
+	z-index: 1;
+	overflow: hidden;
+	width: 22em;
+	height: 16em;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid lightblue;
+	align-items: center;
+	justify-content: center;
+	background: #cce6ff;
+	border-radius: 5%;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75)
+
+
+}
+.project:hover{
+		transform: scale(1.02);
+
+	cursor: pointer;
+}
+.tools{
+	padding-left: 1em;
+	width: 100%;
+	text-align: left;
+	margin: 0.5em;
+	font-size: 1rem;
+	color: black;
+}
+.project-img{
+	margin-top: 1rem;
+	width: 20em;
+	height: 8em;
+}
+#demo{
+	z-index: 2;
+	position: fixed;
+	top: 5em;
+	right: 1em;
+	width: 45em;
+	height: 35em;
+	display: none;
+}
+.repo{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+.repo-img{
+	border: 1px solid white;
+	border-radius: 50%;
+	background: black;
+	width: 1.5em;
+	margin-left: 1em;
+}
+/*.repo-img:hover{
+	background: white;
+}*/
+#contact{
+	position: fixed;
+	left: 0;
+	top: 8em;
+	display: flex;
+	flex-wrap: wrap;
+	width: 5%;
+}
+.logo{
+	margin-top: 3em;
+	width: 2.5em;
+	height: auto;
+}
+.logo:hover{
+	transform: scale(1.1);
+
+}
+#cv{
+	position: fixed;
+	top: 90vh;
+	right: 2em;
+	width: 90%;
+	background: transparent;
+	border: 1px solid white;
+	border-radius: 10%;
+	height: 3.5em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 4em;
+	background: #cce6ff;
+	color: black;
+	opacity: 0.5;
+}
+#cv:hover{
+	cursor: pointer;
+	transform: scale(1.1);
+
+}
+
+#down{
+	width: 2em;
+	height: auto;
+}
