@@ -3,6 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 	<link rel="stylesheet" type="text/css" href="estilos.css">
 	<title></title>
 </head>
@@ -32,6 +34,17 @@
 				<div id="about">
 					<h1>Full-stack web developer</h1>
 				</div>
+				<div id="hamburger">
+					<label for="burger-button"><i class="fas fa-bars"></i></label>
+
+					<ul>
+						<li><a href="#page1" class="btnHeaderDesplegable"><h4>Sobre mí</h4></a></li>
+						<li><a href="#page2" class="btnHeaderDesplegable"><h4>Habilidades</h4></a></li>
+						<li><a href="#page3" class="btnHeaderDesplegable"><h4>Proyectos</h4></a></li>
+
+					</ul>
+				</div>
+				 <button hidden id="burger-button" name="burger-button"></button>
 				<div id="links">
 					<a href="#page1" class="btnHeader"><h4>Sobre mí</h4></a>
 				  	<a href="#page2" class="btnHeader"><h4>Habilidades</h4></a>
@@ -91,7 +104,7 @@
 			<h2>Proyectos</h2>
 			<iframe src="" name="demo" id="demo"></iframe>
 			<div id="projects">
-				<div id="1" class="project" onclick="viewDemo('static/EvaDB.mp4')">
+				<div id="1" class="project" onclick="viewDemo('static/eva.mp4')">
 					<h3>EvaDB - Hospital Manager</h3>
 					<img class="project-img" src="static/camas.png">
 					<div class="tools"> PHP-JS-HTML-CSS-MYSQL</div>
@@ -102,19 +115,21 @@
 					<div class="tools"> PHP-JS-HTML-CSS-MYSQL</div>
 					<a class="repo" href="https://github.com/tbehm/Sucursal"><img class="repo-img" src="static/github.svg"></a>
 				</div>
-				<div id="3" class="project" onclick="viewDemo('link')">
+				<div id="3" class="project">
 					<h3>Wheater API</h3>
 					<img class="project-img" src="static/wheater.png">
 					<div class="tools"> React-HTML-CSS-API</div>
 					<a class="repo" href="https://github.com/tbehm/rick-and-morthy-api"><img class="repo-img" src="static/github.svg"></a>
 				</div>
-				<div id="4" class="project" onclick="viewDemo('link')">
+				<div id="4" class="project" >
 					<h3>Rick and Morthy API</h3>
 					<img class="project-img" src="static/rick.png">
 					<div class="tools"> React-HTML-CSS-API</div>
 					<a class="repo" href="https://github.com/tbehm/rick-and-morthy-api"><img class="repo-img" src="static/github.svg"></a>
 				</div>
-				
+				<div id="footer">
+				Tizianoerosbehm@gmail.com | 2024 Todos los derechos reservados
+			</div id="footer">
 			</div>
 				<div id="contact">
 					<div id="logos">
@@ -128,6 +143,7 @@
 			</div>
 		</div>
 	</div>
+	
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
